@@ -33,6 +33,13 @@ Indexes and reverse-engineering metadata live under `catalog/`:
 - `catalog/FUNCTION_INDEX.md` — extracted source symbols and locations.
 - `catalog/FILE_METADATA_SCHEMA.md` — schema, evidence levels, and method limits.
 
+Coded retrieval markers live under `markers/`:
+
+- `markers/MARKER_INDEX.json` — stable file/symbol markers and task mappings.
+- `markers/TASK_MARKER_MAP.md` — human-readable task-to-code cross-reference.
+- `markers/TASK_MARKERS.md` — stable task marker list.
+- `markers/README.md` — marker types and query examples.
+
 Refresh the Markdown registry with:
 
 ```sh

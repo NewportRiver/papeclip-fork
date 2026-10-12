@@ -1,0 +1,40 @@
+# Task Markers
+
+These markers bind the development plan to the generated file/symbol registry.
+- `T-AU-001` — Record branch baseline — see `TASK_MARKER_MAP.md` and JSON key `AU-001`
+- `T-AU-002` — Define evidence and automation policy — see `TASK_MARKER_MAP.md` and JSON key `AU-002`
+- `T-AU-003` — Define metadata schema and regeneration contract — see `TASK_MARKER_MAP.md` and JSON key `AU-003`
+- `T-AU-010` — Create package/domain manifest schema — see `TASK_MARKER_MAP.md` and JSON key `AU-010`
+- `T-AU-011` — Manifest server/API/auth domain — see `TASK_MARKER_MAP.md` and JSON key `AU-011`
+- `T-AU-012` — Manifest database/schema/migrations domain — see `TASK_MARKER_MAP.md` and JSON key `AU-012`
+- `T-AU-013` — Manifest task/goal/company domain — see `TASK_MARKER_MAP.md` and JSON key `AU-013`
+- `T-AU-014` — Manifest heartbeat/execution/recovery domain — see `TASK_MARKER_MAP.md` and JSON key `AU-014`
+- `T-AU-015` — Manifest adapters/Hermes/plugins domain — see `TASK_MARKER_MAP.md` and JSON key `AU-015`
+- `T-AU-016` — Manifest UI/CLI/deployment domain — see `TASK_MARKER_MAP.md` and JSON key `AU-016`
+- `T-AU-017` — Manifest connectors/MCP/skills/workspaces domain — see `TASK_MARKER_MAP.md` and JSON key `AU-017`
+- `T-AU-018` — Map tests and fixtures to capabilities — see `TASK_MARKER_MAP.md` and JSON key `AU-018`
+- `T-AU-019` — Add catalog freshness check — see `TASK_MARKER_MAP.md` and JSON key `AU-019`
+- `T-AU-020` — Define stable contract IDs — see `TASK_MARKER_MAP.md` and JSON key `AU-020`
+- `T-AU-021` — Map route/service/schema edges — see `TASK_MARKER_MAP.md` and JSON key `AU-021`
+- `T-AU-022` — Map task execution state machine — see `TASK_MARKER_MAP.md` and JSON key `AU-022`
+- `T-AU-023` — Map configuration and environment variables — see `TASK_MARKER_MAP.md` and JSON key `AU-023`
+- `T-AU-024` — Map security and side-effect boundaries — see `TASK_MARKER_MAP.md` and JSON key `AU-024`
+- `T-AU-030` — Install prerequisite and environment probe — see `TASK_MARKER_MAP.md` and JSON key `AU-030`
+- `T-AU-031` — Disposable local boot recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-031`
+- `T-AU-032` — Authenticated/private bootstrap recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-032`
+- `T-AU-033` — Company/agent/task lifecycle recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-033`
+- `T-AU-034` — Database migration/backup/restore recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-034`
+- `T-AU-035` — Heartbeat with deterministic fake adapter — see `TASK_MARKER_MAP.md` and JSON key `AU-035`
+- `T-AU-036` — Stop/pause/recovery recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-036`
+- `T-AU-037` — Hermes adapter local/gateway recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-037`
+- `T-AU-038` — Connector/MCP least-privilege recipe — see `TASK_MARKER_MAP.md` and JSON key `AU-038`
+- `T-AU-040` — Repository navigator skill — see `TASK_MARKER_MAP.md` and JSON key `AU-040`
+- `T-AU-041` — Operator skill — see `TASK_MARKER_MAP.md` and JSON key `AU-041`
+- `T-AU-042` — Database/recovery engineer skill — see `TASK_MARKER_MAP.md` and JSON key `AU-042`
+- `T-AU-043` — Adapter/Hermes engineer skill — see `TASK_MARKER_MAP.md` and JSON key `AU-043`
+- `T-AU-044` — Security/release reviewer skill — see `TASK_MARKER_MAP.md` and JSON key `AU-044`
+- `T-AU-050` — Documentation drift detector — see `TASK_MARKER_MAP.md` and JSON key `AU-050`
+- `T-AU-051` — Change-to-knowledge update helper — see `TASK_MARKER_MAP.md` and JSON key `AU-051`
+- `T-AU-052` — Fresh-session resumption benchmark — see `TASK_MARKER_MAP.md` and JSON key `AU-052`
+- `T-AU-053` — Agentic maintenance loop — see `TASK_MARKER_MAP.md` and JSON key `AU-053`
+- `T-AU-054` — Capability coverage dashboard — see `TASK_MARKER_MAP.md` and JSON key `AU-054`

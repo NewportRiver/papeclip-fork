@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T02:03:12.328189+00:00
+Generated: 2026-10-12T02:08:13.085277+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -435,14 +435,17 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 16 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
-| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 815 |
+| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 817 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
-| `engineering/README.md` | Paperclip Engineering Framework | 46 |
+| `engineering/README.md` | Paperclip Engineering Framework | 53 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
 | `engineering/TEST_STATUS.md` | Test Status | 34 |
 | `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
 | `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163042 |
 | `engineering/catalog/README.md` | Code and File Catalog | 52 |
+| `engineering/markers/README.md` | Marker Index | 33 |
+| `engineering/markers/TASK_MARKERS.md` | Task Markers | 40 |
+| `engineering/markers/TASK_MARKER_MAP.md` | Task-to-Marker Cross-Reference | 2055 |
 | `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` | Agentic Understanding Development Plan | 110 |
 | `engineering/plan/TASKS.md` | Agentic Understanding Task Backlog | 252 |
 | `engineering/templates/BUG.md` | BL-NNN — Durable lesson title | 13 |
