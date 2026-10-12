@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T01:43:34.179957+00:00
+Generated: 2026-10-12T01:49:09.493180+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -429,16 +429,19 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `docs/start/what-is-paperclip.md` | The Problem | 39 |
 | `engineering/ARCHITECTURE.md` | Architecture Record | 44 |
 | `engineering/BUGLOG.md` | Buglog and Engineering Lessons | 33 |
-| `engineering/CURRENT_WORK.md` | Current Work | 29 |
+| `engineering/CURRENT_WORK.md` | Current Work | 30 |
 | `engineering/DECISIONS.md` | Engineering Decisions | 25 |
 | `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 16 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
-| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 810 |
+| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 811 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
-| `engineering/README.md` | Paperclip Engineering Framework | 31 |
+| `engineering/README.md` | Paperclip Engineering Framework | 43 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
-| `engineering/TEST_STATUS.md` | Test Status | 32 |
+| `engineering/TEST_STATUS.md` | Test Status | 34 |
+| `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
+| `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163034 |
+| `engineering/catalog/README.md` | Code and File Catalog | 52 |
 | `engineering/templates/BUG.md` | BL-NNN — Durable lesson title | 13 |
 | `engineering/templates/DECISION.md` | D-NNN — Decision title | 14 |
 | `engineering/templates/JOURNAL_ENTRY.md` | YYYY-MM-DD — Title | 19 |

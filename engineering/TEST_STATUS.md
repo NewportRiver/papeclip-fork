@@ -5,6 +5,8 @@
 - Git checkout and fork remote inspected.
 - Existing documentation/source references used by the engineering guide were confirmed present.
 - New engineering files are Markdown and contain no intentional credentials.
+- Code catalog JSON parses successfully with `python3 -m json.tool`.
+- Catalog generation indexed 9,657 tracked files and extracted 163,028 source symbols.
 - Before this pass, `git diff --check` passed for the engineering guide.
 
 ## Not run

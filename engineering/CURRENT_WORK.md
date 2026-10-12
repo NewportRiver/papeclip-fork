@@ -13,6 +13,7 @@
 - Inspected upstream contributor rules, product/goal/implementation docs, package manifests, environment examples, deployment/database docs, scripts, skills, releases, tests, and recent Git history.
 - Added this durable engineering framework.
 - Began backfilling the framework from verified repository data.
+- Added a reproducible catalog for all tracked files and extracted source symbols.
 
 ## Next actions
 

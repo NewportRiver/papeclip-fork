@@ -24,8 +24,20 @@ This directory is the durable engineering memory and development log for the `Ne
 
 Every material development change should update the smallest relevant record: a decision, feature, bug lesson, test status, journal entry, or current-work snapshot. Do not store credentials or raw session transcripts here. Generated/runtime output stays outside this durable framework unless it is intentionally summarized as evidence.
 
+Indexes and reverse-engineering metadata live under `catalog/`:
+
+- `catalog/FILE_CATALOG.json` — metadata for every tracked file.
+- `catalog/FUNCTION_INDEX.md` — extracted source symbols and locations.
+- `catalog/FILE_METADATA_SCHEMA.md` — schema, evidence levels, and method limits.
+
 Refresh the Markdown registry with:
 
 ```sh
 python3 engineering/scripts/refresh_md_registry.py
+```
+
+Regenerate the code catalog after source or tracked-file changes:
+
+```sh
+python3 engineering/scripts/build_code_catalog.py
 ```
