@@ -17,6 +17,8 @@ This directory is the durable engineering memory and development log for the `Ne
 
 - `plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — branch objective, milestones, and exit criteria.
 - `plan/TASKS.md` — dependency-ordered executable task backlog.
+- `manifests/` — bounded-domain manifests, contract-ID rules, configuration index, and security matrix.
+- `scripts/check_catalog_freshness.py` — fails when generated catalogs do not match the current Git tree.
 - `FEATURES.md` — capability inventory derived from product docs and code.
 - `BUGLOG.md` — durable bug lessons and observed failure patterns.
 - `DECISIONS.md` — architectural decisions and tradeoffs.

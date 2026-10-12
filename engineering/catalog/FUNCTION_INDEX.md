@@ -1,6 +1,6 @@
 # Function and Symbol Index
 
-Generated from commit `2ba6e64baf1f41b0c335299404387ceba77cf263`.
+Generated from commit `79a0d21e63989f416423d39e4b192ec18cfaae1c`.
 
 | Kind | Symbol | File | Line | Domain |
 |---|---|---|---:|---|
@@ -5391,6 +5391,10 @@ Generated from commit `2ba6e64baf1f41b0c335299404387ceba77cf263`.
 | `python-def` | `imports` | `engineering/scripts/build_code_catalog.py` | 81 | general |
 | `python-def` | `headings` | `engineering/scripts/build_code_catalog.py` | 88 | general |
 | `python-def` | `env_vars` | `engineering/scripts/build_code_catalog.py` | 91 | general |
+| `python-def` | `code` | `engineering/scripts/build_marker_index.py` | 12 | general |
+| `python-def` | `marker_file` | `engineering/scripts/build_marker_index.py` | 20 | general |
+| `python-def` | `marker_symbol` | `engineering/scripts/build_marker_index.py` | 23 | general |
+| `python-def` | `matches` | `engineering/scripts/build_marker_index.py` | 74 | general |
 | `const` | `endpoint` | `integrations/assistant-plugins/build.mjs` | 6 | plugin |
 | `const` | `local` | `integrations/assistant-plugins/build.mjs` | 7 | plugin |
 | `const` | `root` | `integrations/assistant-plugins/build.mjs` | 12 | plugin |

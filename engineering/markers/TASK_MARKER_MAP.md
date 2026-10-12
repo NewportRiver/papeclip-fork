@@ -9,6 +9,7 @@ Use task IDs to retrieve the relevant files first, then follow symbol markers an
 Retrieval patterns: `engineering/`, `AGENTS.md`, `README.md`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -25,20 +26,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
-- `F-D8C1951CED` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/TEAM.md` — documentation — general
-- `F-E221B21298` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/cto/AGENTS.md` — documentation — general
-- `F-C7ABC6CE71` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/qa/AGENTS.md` — documentation — general
-- `F-4DDA668B0C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/senior-coder/AGENTS.md` — documentation — general
-- `F-CFD12D0C96` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/PROJECT.md` — documentation — general
-- `F-CBD17B3AA2` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/tasks/weekly-engineering-sync/TASK.md` — documentation — general
-- `F-D5A05002CC` `.agents/skills/paperclip-page/README.md` — documentation — skills
-- `F-37DD68363F` `AGENTS.md` — documentation — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -50,12 +50,17 @@ Priority symbol markers:
 - `S-661B8D0877` `imports` — `engineering/scripts/build_code_catalog.py:81`
 - `S-E14C01CD04` `headings` — `engineering/scripts/build_code_catalog.py:88`
 - `S-5B2D4C0247` `env_vars` — `engineering/scripts/build_code_catalog.py:91`
+- `S-132754B1C5` `code` — `engineering/scripts/build_marker_index.py:12`
+- `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
+- `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
+- `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
 
 ## AU-002 — Define evidence and automation policy
 
 Retrieval patterns: `engineering/ENGINEERING_FUNDAMENTALS.md`, `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-D6EEF29D07` `engineering/ENGINEERING_FUNDAMENTALS.md` — documentation — general
 
 Priority symbol markers:
@@ -70,6 +75,7 @@ File markers:
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 
 Priority symbol markers:
@@ -81,6 +87,10 @@ Priority symbol markers:
 - `S-661B8D0877` `imports` — `engineering/scripts/build_code_catalog.py:81`
 - `S-E14C01CD04` `headings` — `engineering/scripts/build_code_catalog.py:88`
 - `S-5B2D4C0247` `env_vars` — `engineering/scripts/build_code_catalog.py:91`
+- `S-132754B1C5` `code` — `engineering/scripts/build_marker_index.py:12`
+- `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
+- `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
+- `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
 
 ## AU-010 — Create package/domain manifest schema
 
@@ -91,6 +101,8 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 
 Priority symbol markers:
 
@@ -624,6 +636,7 @@ File markers:
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-1D9A0CBBDF` `cli/package.json` — configuration/data — general
 - `F-7030D0B2F7` `package.json` — configuration/data — general
@@ -648,8 +661,7 @@ File markers:
 - `F-9B5D178AC2` `packages/paperclip-runner/package.json` — configuration/data — runner
 - `F-83FBD2BA06` `packages/paperclip-runner/scripts/pi-distribution/package.json` — configuration/data — runner
 - `F-971D6AAD1C` `packages/plugins/create-paperclip-plugin/package.json` — configuration/data — plugin
-- `F-986CD6DCC7` `packages/plugins/examples/plugin-authoring-smoke-example/package.json` — configuration/data — authentication, plugin
-- … 23 additional file markers in JSON
+- … 24 additional file markers in JSON
 
 Priority symbol markers:
 - `S-BAE5780C5A` `tracked_files` — `engineering/scripts/build_code_catalog.py:15`
@@ -660,6 +672,10 @@ Priority symbol markers:
 - `S-661B8D0877` `imports` — `engineering/scripts/build_code_catalog.py:81`
 - `S-E14C01CD04` `headings` — `engineering/scripts/build_code_catalog.py:88`
 - `S-5B2D4C0247` `env_vars` — `engineering/scripts/build_code_catalog.py:91`
+- `S-132754B1C5` `code` — `engineering/scripts/build_marker_index.py:12`
+- `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
+- `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
+- `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
 
 ## AU-020 — Define stable contract IDs
 
@@ -670,6 +686,10 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
 
 Priority symbol markers:
 
@@ -1527,6 +1547,12 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 
 Priority symbol markers:
 
@@ -1547,6 +1573,7 @@ File markers:
 - `F-285B09C0E4` `skills/paperclip/scripts/paperclip-issue-update.sh` — build/deployment-script — skills
 - `F-A65E3CF441` `skills/paperclip/scripts/paperclip-upload-artifact.sh` — build/deployment-script — skills
 - `F-6C420200A2` `skills/paperclip/scripts/submit-agent-commentary.mjs` — source-code — skills
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1563,8 +1590,7 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1601,6 +1627,7 @@ Retrieval patterns: `packages/db/`, `scripts/backup-db.sh`, `engineering/`
 
 File markers:
 - `F-66B23C2E44` `scripts/backup-db.sh` — build/deployment-script — general
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1617,19 +1644,18 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-0676FE9BDC` `packages/db/.gitattributes` — asset/other — general
-- `F-E82FF54EFA` `packages/db/CHANGELOG.md` — documentation — general
-- `F-6046B226ED` `packages/db/drizzle.config.ts` — source-code — general
-- `F-A51BCEB3BC` `packages/db/package.json` — configuration/data — general
-- `F-454529C70F` `packages/db/scripts/clean-poisoned-claude-sessions.test.ts` — source-code — general
-- `F-E77D22768E` `packages/db/scripts/clean-poisoned-claude-sessions.ts` — source-code — general
-- `F-25767B1878` `packages/db/scripts/create-auth-bootstrap-invite.ts` — source-code — authentication
-- `F-A37DC75027` `packages/db/src/__fixtures__/postgres-connection-recovery.mjs` — source-code — recovery
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1730,6 +1756,7 @@ Priority symbol markers:
 Retrieval patterns: `.github/`, `doc/SECURITY.md`, `scripts/`, `engineering/`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1746,20 +1773,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
-- `F-D8C1951CED` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/TEAM.md` — documentation — general
-- `F-E221B21298` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/cto/AGENTS.md` — documentation — general
-- `F-C7ABC6CE71` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/qa/AGENTS.md` — documentation — general
-- `F-4DDA668B0C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/senior-coder/AGENTS.md` — documentation — general
-- `F-CFD12D0C96` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/PROJECT.md` — documentation — general
-- `F-CBD17B3AA2` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/tasks/weekly-engineering-sync/TASK.md` — documentation — general
-- `F-610A5C6A86` `.agents/skills/garden-inbox/scripts/garden-inbox.mjs` — source-code — skills
-- `F-9922DE6AFE` `.agents/skills/garden-inbox/scripts/garden-inbox.test.mjs` — source-code — skills
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1800,7 +1826,10 @@ File markers:
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 
 Priority symbol markers:
 - `S-BAE5780C5A` `tracked_files` — `engineering/scripts/build_code_catalog.py:15`
@@ -1811,12 +1840,17 @@ Priority symbol markers:
 - `S-661B8D0877` `imports` — `engineering/scripts/build_code_catalog.py:81`
 - `S-E14C01CD04` `headings` — `engineering/scripts/build_code_catalog.py:88`
 - `S-5B2D4C0247` `env_vars` — `engineering/scripts/build_code_catalog.py:91`
+- `S-132754B1C5` `code` — `engineering/scripts/build_marker_index.py:12`
+- `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
+- `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
+- `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
 
 ## AU-051 — Change-to-knowledge update helper
 
 Retrieval patterns: `engineering/`, `scripts/`, `git`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1833,20 +1867,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
-- `F-D8C1951CED` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/TEAM.md` — documentation — general
-- `F-E221B21298` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/cto/AGENTS.md` — documentation — general
-- `F-C7ABC6CE71` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/qa/AGENTS.md` — documentation — general
-- `F-4DDA668B0C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/senior-coder/AGENTS.md` — documentation — general
-- `F-CFD12D0C96` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/PROJECT.md` — documentation — general
-- `F-CBD17B3AA2` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/tasks/weekly-engineering-sync/TASK.md` — documentation — general
-- `F-610A5C6A86` `.agents/skills/garden-inbox/scripts/garden-inbox.mjs` — source-code — skills
-- `F-9922DE6AFE` `.agents/skills/garden-inbox/scripts/garden-inbox.test.mjs` — source-code — skills
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1882,6 +1915,7 @@ Priority symbol markers:
 Retrieval patterns: `engineering/`, `AGENTS.md`, `README.md`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1898,20 +1932,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
-- `F-D8C1951CED` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/TEAM.md` — documentation — general
-- `F-E221B21298` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/cto/AGENTS.md` — documentation — general
-- `F-C7ABC6CE71` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/qa/AGENTS.md` — documentation — general
-- `F-4DDA668B0C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/senior-coder/AGENTS.md` — documentation — general
-- `F-CFD12D0C96` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/PROJECT.md` — documentation — general
-- `F-CBD17B3AA2` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/tasks/weekly-engineering-sync/TASK.md` — documentation — general
-- `F-D5A05002CC` `.agents/skills/paperclip-page/README.md` — documentation — skills
-- `F-37DD68363F` `AGENTS.md` — documentation — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1923,12 +1956,17 @@ Priority symbol markers:
 - `S-661B8D0877` `imports` — `engineering/scripts/build_code_catalog.py:81`
 - `S-E14C01CD04` `headings` — `engineering/scripts/build_code_catalog.py:88`
 - `S-5B2D4C0247` `env_vars` — `engineering/scripts/build_code_catalog.py:91`
+- `S-132754B1C5` `code` — `engineering/scripts/build_marker_index.py:12`
+- `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
+- `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
+- `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
 
 ## AU-053 — Agentic maintenance loop
 
 Retrieval patterns: `engineering/`, `scripts/`
 
 File markers:
+- `F-46F8A240A1` `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` — documentation — general
 - `F-456EFA9A89` `engineering/ARCHITECTURE.md` — documentation — general
 - `F-E42CD19FCC` `engineering/BUGLOG.md` — documentation — general
 - `F-6A70E3A1B8` `engineering/CURRENT_WORK.md` — documentation — general
@@ -1945,20 +1983,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-38A991565E` `engineering/markers/README.md` — documentation — general
+- `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
+- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
+- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
 - `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
 - `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
 - `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
-- `F-D8C1951CED` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/TEAM.md` — documentation — general
-- `F-E221B21298` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/cto/AGENTS.md` — documentation — general
-- `F-C7ABC6CE71` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/qa/AGENTS.md` — documentation — general
-- `F-4DDA668B0C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/agents/senior-coder/AGENTS.md` — documentation — general
-- `F-CFD12D0C96` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/PROJECT.md` — documentation — general
-- `F-CBD17B3AA2` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/projects/product-engineering/tasks/weekly-engineering-sync/TASK.md` — documentation — general
-- `F-610A5C6A86` `.agents/skills/garden-inbox/scripts/garden-inbox.mjs` — source-code — skills
-- `F-9922DE6AFE` `.agents/skills/garden-inbox/scripts/garden-inbox.test.mjs` — source-code — skills
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1998,6 +2035,8 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
+- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 - `F-BC3FB3941E` `.github/scripts/tests/check-pr-coauthors.test.mjs` — source-code — authentication, github-integration
 - `F-53302E7953` `.github/scripts/tests/check-pr-dedup-search.test.mjs` — source-code — github-integration
 - `F-5E15B1233E` `.github/scripts/tests/check-pr-dependencies.test.mjs` — source-code — github-integration
@@ -2022,8 +2061,6 @@ File markers:
 - `F-613B390A6D` `evals/promptfoo/tests/core.yaml` — configuration/data — general
 - `F-382A1CAF88` `evals/promptfoo/tests/governance.yaml` — configuration/data — general
 - `F-8D34095616` `evals/promptfoo/tests/mcp-gateway.yaml` — configuration/data — mcp
-- `F-BB178A7B69` `evals/promptfoo/tests/phase5-memory-control-surfaces.yaml` — configuration/data — general
-- `F-497F027EBA` `evals/promptfoo/tests/release-gates.yaml` — configuration/data — release
 - … 50 additional file markers in JSON
 
 Priority symbol markers:

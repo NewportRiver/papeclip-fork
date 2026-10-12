@@ -28,7 +28,7 @@ Task states: `TODO`, `IN_PROGRESS`, `BLOCKED`, `DONE`.
 ## Phase 1 — Knowledge map
 
 ### AU-010 — Create package/domain manifest schema
-- State: TODO
+- State: DONE
 - Depends on: AU-003
 - Deliverable: `engineering/manifests/MANIFEST_SCHEMA.md` and validation script.
 - Acceptance: manifest fields cover purpose, boundaries, owners, entrypoints, dependencies, config, data, tests, runbooks, invariants, evidence, and gaps.
@@ -82,7 +82,7 @@ Task states: `TODO`, `IN_PROGRESS`, `BLOCKED`, `DONE`.
 - Acceptance: each critical capability names at least one test/recipe or an explicit coverage gap.
 
 ### AU-019 — Add catalog freshness check
-- State: TODO
+- State: DONE
 - Depends on: AU-010
 - Deliverable: script/check that compares catalog provenance and tracked-file state.
 - Acceptance: stale catalog produces a clear non-zero result; refresh produces a clean result.
@@ -90,7 +90,7 @@ Task states: `TODO`, `IN_PROGRESS`, `BLOCKED`, `DONE`.
 ## Phase 2 — Contract graph
 
 ### AU-020 — Define stable contract IDs
-- State: TODO
+- State: DONE
 - Depends on: AU-010
 - Deliverable: ID convention for routes, services, tables, migrations, adapters, recipes, and tests.
 - Acceptance: IDs are stable across documentation refreshes and link to source paths.
@@ -108,13 +108,13 @@ Task states: `TODO`, `IN_PROGRESS`, `BLOCKED`, `DONE`.
 - Acceptance: valid transitions, locks, stop, retry, pause, and recovery boundaries are explicit.
 
 ### AU-023 — Map configuration and environment variables
-- State: TODO
+- State: DONE
 - Depends on: AU-011, AU-012, AU-015, AU-016, AU-017
 - Deliverable: layered operator configuration index.
 - Acceptance: core variables map to loader/consumer/docs; test-only variables are separated.
 
 ### AU-024 — Map security and side-effect boundaries
-- State: TODO
+- State: DONE
 - Depends on: AU-011, AU-015, AU-017, AU-020
 - Deliverable: security/control matrix.
 - Acceptance: human, agent, connector, MCP, workspace, provider, and production side effects have explicit controls and escalation levels.

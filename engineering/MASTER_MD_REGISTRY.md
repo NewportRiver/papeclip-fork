@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T02:11:07.798648+00:00
+Generated: 2026-10-12T02:37:31.490942+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -437,15 +437,24 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
 | `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 820 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
-| `engineering/README.md` | Paperclip Engineering Framework | 53 |
+| `engineering/README.md` | Paperclip Engineering Framework | 55 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
 | `engineering/TEST_STATUS.md` | Test Status | 34 |
 | `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
-| `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163042 |
+| `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163046 |
 | `engineering/catalog/README.md` | Code and File Catalog | 52 |
+| `engineering/manifests/CONFIGURATION_INDEX.md` | Configuration and Environment Index | 24 |
+| `engineering/manifests/CONTRACT_ID_RULES.md` | Stable Contract ID Rules | 35 |
+| `engineering/manifests/MANIFEST_SCHEMA.md` | Domain Manifest Schema | 22 |
+| `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` | Security and Side-Effect Matrix | 25 |
+| `engineering/manifests/adapters-hermes-plugins.md` | Adapters, Hermes, and Plugins Domain Manifest | 21 |
+| `engineering/manifests/database.md` | Database and Migration Domain Manifest | 24 |
+| `engineering/manifests/execution-recovery.md` | Execution and Recovery Domain Manifest | 21 |
+| `engineering/manifests/server-api-auth.md` | Server/API/Auth Domain Manifest | 29 |
+| `engineering/manifests/ui-cli-deployment.md` | UI, CLI, and Deployment Domain Manifest | 23 |
 | `engineering/markers/README.md` | Marker Index | 33 |
 | `engineering/markers/TASK_MARKERS.md` | Task Markers | 40 |
-| `engineering/markers/TASK_MARKER_MAP.md` | Task-to-Marker Cross-Reference | 2055 |
+| `engineering/markers/TASK_MARKER_MAP.md` | Task-to-Marker Cross-Reference | 2092 |
 | `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` | Agentic Understanding Development Plan | 110 |
 | `engineering/plan/TASKS.md` | Agentic Understanding Task Backlog | 252 |
 | `engineering/templates/BUG.md` | BL-NNN — Durable lesson title | 13 |

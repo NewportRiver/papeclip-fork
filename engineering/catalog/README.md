@@ -1,7 +1,7 @@
 # Code and File Catalog
 
-Generated: `2026-10-12T01:51:32.441404+00:00`
-Indexed commit: `2ba6e64baf1f41b0c335299404387ceba77cf263`
+Generated: `2026-10-12T02:37:25.580865+00:00`
+Indexed commit: `79a0d21e63989f416423d39e4b192ec18cfaae1c`
 
 This catalog is generated from `git ls-files`. It provides structural metadata for every tracked file and extracted symbols for source files. It is an index, not a replacement for code review or runtime proof.
 
@@ -10,12 +10,12 @@ This catalog is generated from `git ls-files`. It provides structural metadata f
 - `asset/other`: 380
 - `build/deployment-script`: 245
 - `configuration/data`: 553
-- `documentation`: 947
-- `engineering-index`: 3
+- `documentation`: 953
+- `engineering-index`: 5
 - `schema-migration`: 379
 - `source-code`: 5795
 - `test-fixture`: 1360
-- `tracked`: 9664
+- `tracked`: 9672
 
 ## Architectural layers
 
@@ -25,7 +25,7 @@ This catalog is generated from `git ls-files`. It provides structural metadata f
 - **chat-connectors** — 77 files
 - **connectors** — 68 files
 - **database** — 396 files
-- **general** — 4525 files
+- **general** — 4533 files
 - **github-integration** — 172 files
 - **governance** — 32 files
 - **heartbeat-execution** — 127 files

@@ -1,6 +1,6 @@
 # Marker Index
 
-Catalog source commit: `2ba6e64baf1f41b0c335299404387ceba77cf263`
+Catalog source commit: `79a0d21e63989f416423d39e4b192ec18cfaae1c`
 
 Marker IDs are stable hashes of repository-relative identity. They are retrieval keys, not replacements for source paths.
 
@@ -15,8 +15,8 @@ Marker IDs are stable hashes of repository-relative identity. They are retrieval
 
 ## Counts
 
-- Files: 9662
-- Symbols: 163036
+- Files: 9670
+- Symbols: 163040
 - AU tasks mapped: 37
 
 ## Query examples
