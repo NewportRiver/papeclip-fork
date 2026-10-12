@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T02:39:54.965192+00:00
+Generated: 2026-10-12T02:42:04.185822+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -430,7 +430,7 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` | Agentic Paperclip Understanding and Automation Roadmap | 253 |
 | `engineering/ARCHITECTURE.md` | Architecture Record | 44 |
 | `engineering/BUGLOG.md` | Buglog and Engineering Lessons | 33 |
-| `engineering/CURRENT_WORK.md` | Current Work | 30 |
+| `engineering/CURRENT_WORK.md` | Current Work | 32 |
 | `engineering/DECISIONS.md` | Engineering Decisions | 25 |
 | `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 55 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |

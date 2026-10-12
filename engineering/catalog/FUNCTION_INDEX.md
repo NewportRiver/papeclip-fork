@@ -1,6 +1,6 @@
 # Function and Symbol Index
 
-Generated from commit `136ecedda4db8ce98bf8e6ffce82531261cbace6`.
+Generated from commit `63f9c58e5967a7c7a7141e1cc980559fbaf3fe53`.
 
 | Kind | Symbol | File | Line | Domain |
 |---|---|---|---:|---|
