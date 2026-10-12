@@ -3,9 +3,9 @@
 ## State
 
 - Repository: `NewportRiver/papeclip-fork`
-- Branch: `master`
-- Fork-specific engineering framework: being established
-- Last verified source baseline before this framework pass: `0ce8f4c73`
+- Branch: `develop/agentic-understanding`
+- Fork-specific engineering framework: established and extended
+- Last verified static catalog: current branch HEAD
 - Existing engineering guide: `doc/ENGINEERING-OPERATIONS-GUIDE.md`
 
 ## Completed in this pass
@@ -13,6 +13,8 @@
 - Inspected upstream contributor rules, product/goal/implementation docs, package manifests, environment examples, deployment/database docs, scripts, skills, releases, tests, and recent Git history.
 - Added this durable engineering framework.
 - Began backfilling the framework from verified repository data.
+- Added the agentic-understanding development branch plan and task backlog.
+- Completed the Android-safe static foundation: domain manifests, contract-ID rules, configuration index, security/side-effect matrix, manifest validation, catalog freshness checking, and regenerated file/symbol/marker indexes.
 - Added a reproducible catalog for all tracked files and extracted source symbols.
 
 ## Next actions
