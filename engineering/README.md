@@ -15,6 +15,8 @@ This directory is the durable engineering memory and development log for the `Ne
 
 ## Development record
 
+- `plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — branch objective, milestones, and exit criteria.
+- `plan/TASKS.md` — dependency-ordered executable task backlog.
 - `FEATURES.md` — capability inventory derived from product docs and code.
 - `BUGLOG.md` — durable bug lessons and observed failure patterns.
 - `DECISIONS.md` — architectural decisions and tradeoffs.
