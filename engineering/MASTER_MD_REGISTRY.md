@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T02:08:13.085277+00:00
+Generated: 2026-10-12T02:11:07.798648+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -432,10 +432,10 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/BUGLOG.md` | Buglog and Engineering Lessons | 33 |
 | `engineering/CURRENT_WORK.md` | Current Work | 30 |
 | `engineering/DECISIONS.md` | Engineering Decisions | 25 |
-| `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 16 |
+| `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 55 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
-| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 817 |
+| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 820 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
 | `engineering/README.md` | Paperclip Engineering Framework | 53 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
