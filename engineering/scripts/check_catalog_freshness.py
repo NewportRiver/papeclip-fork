@@ -17,7 +17,7 @@ def main():
     tracked=git('ls-files').splitlines()
     data=json.loads(CAT.read_text())
     indexed={x['path'] for x in data['files']}
-    expected=set(tracked)
+    expected={p for p in tracked if not (ROOT/p).is_symlink()}
     if data.get('commit') != head:
         errors.append(f'catalog source commit {data.get("commit")} != HEAD {head}')
     if indexed != expected:
