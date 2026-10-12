@@ -101,16 +101,17 @@ for rel in tracked_files():
     text='' if binary or ext not in TEXT_EXT else raw.decode('utf-8','replace')
     item={'path':path,'layer':layer(path),'role':role(path,ext),'domain':classify_domain(path),'extension':ext or '(none)','bytes':len(raw),'lines':None if binary else text.count('\n')+ (1 if text else 0),'binary':binary,'confidence':'automated-structural'}
     if text:
-        item.update({'headings':headings(text),'symbols':symbols(text,ext),'imports':imports(text,ext),'environment_variables':env_vars(text)})
+        extracted_symbols=symbols(text,ext)
+        item.update({'headings':headings(text),'symbol_count':len(extracted_symbols),'imports':imports(text,ext),'environment_variables':env_vars(text)})
         if ext in SOURCE_EXT:
-            for s in item['symbols']:
+            for s in extracted_symbols:
                 symbol_rows.append({'path':path,**s,'layer':item['layer'],'domain':item['domain']})
     files.append(item); counts[item['role']]+=1
     for d in item['domain']: domain_files[d].append(path)
 
 commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
 meta={'schema_version':'1.0','generated_at':datetime.now(timezone.utc).isoformat(),'commit':commit,'method':'git-tracked-file structural scan; regex symbol extraction; source docs remain authoritative','limitations':['No AST or runtime call graph was produced.','Generated metadata describes file structure and naming signals, not proof that every path executes.','Semantic ownership must be confirmed by source tests and live runtime traces.'],'counts':dict(counts),'files':files,'symbols':symbol_rows,'domains':{k:sorted(v) for k,v in sorted(domain_files.items())}}
-(OUT/'FILE_CATALOG.json').write_text(json.dumps(meta,indent=2,sort_keys=False)+'\n')
+(OUT/'FILE_CATALOG.json').write_text(json.dumps(meta,separators=(',',':'))+'\n')
 
 lines=['# Code and File Catalog','',f'Generated: `{meta["generated_at"]}`',f'Indexed commit: `{commit}`','', 'This catalog is generated from `git ls-files`. It provides structural metadata for every tracked file and extracted symbols for source files. It is an index, not a replacement for code review or runtime proof.', '', '## Inventory counts','']
 for k,v in sorted(counts.items()): lines.append(f'- `{k}`: {v}')

@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T01:49:09.493180+00:00
+Generated: 2026-10-12T01:51:48.530283+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -434,13 +434,13 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 16 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
-| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 811 |
+| `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 814 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
 | `engineering/README.md` | Paperclip Engineering Framework | 43 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
 | `engineering/TEST_STATUS.md` | Test Status | 34 |
 | `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
-| `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163034 |
+| `engineering/catalog/FUNCTION_INDEX.md` | Function and Symbol Index | 163042 |
 | `engineering/catalog/README.md` | Code and File Catalog | 52 |
 | `engineering/templates/BUG.md` | BL-NNN — Durable lesson title | 13 |
 | `engineering/templates/DECISION.md` | D-NNN — Decision title | 14 |
