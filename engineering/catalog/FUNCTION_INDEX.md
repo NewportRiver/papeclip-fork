@@ -1,6 +1,6 @@
 # Function and Symbol Index
 
-Generated from commit `79a0d21e63989f416423d39e4b192ec18cfaae1c`.
+Generated from commit `136ecedda4db8ce98bf8e6ffce82531261cbace6`.
 
 | Kind | Symbol | File | Line | Domain |
 |---|---|---|---:|---|
@@ -5395,6 +5395,8 @@ Generated from commit `79a0d21e63989f416423d39e4b192ec18cfaae1c`.
 | `python-def` | `marker_file` | `engineering/scripts/build_marker_index.py` | 20 | general |
 | `python-def` | `marker_symbol` | `engineering/scripts/build_marker_index.py` | 23 | general |
 | `python-def` | `matches` | `engineering/scripts/build_marker_index.py` | 74 | general |
+| `python-def` | `git` | `engineering/scripts/check_catalog_freshness.py` | 10 | general |
+| `python-def` | `main` | `engineering/scripts/check_catalog_freshness.py` | 13 | general |
 | `const` | `endpoint` | `integrations/assistant-plugins/build.mjs` | 6 | plugin |
 | `const` | `local` | `integrations/assistant-plugins/build.mjs` | 7 | plugin |
 | `const` | `root` | `integrations/assistant-plugins/build.mjs` | 12 | plugin |

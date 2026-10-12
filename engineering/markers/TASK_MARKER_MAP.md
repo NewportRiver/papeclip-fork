@@ -26,19 +26,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
 - `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -54,6 +54,8 @@ Priority symbol markers:
 - `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
 - `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
 - `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
+- `S-4A6C5954BE` `git` — `engineering/scripts/check_catalog_freshness.py:10`
+- `S-564A5BDA96` `main` — `engineering/scripts/check_catalog_freshness.py:13`
 
 ## AU-002 — Define evidence and automation policy
 
@@ -76,7 +78,9 @@ File markers:
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
 - `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
+- `F-53A65427A1` `engineering/scripts/check_catalog_freshness.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
+- `F-22FC22B151` `engineering/scripts/validate_manifests.py` — engineering-index — general
 
 Priority symbol markers:
 - `S-BAE5780C5A` `tracked_files` — `engineering/scripts/build_code_catalog.py:15`
@@ -91,6 +95,8 @@ Priority symbol markers:
 - `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
 - `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
 - `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
+- `S-4A6C5954BE` `git` — `engineering/scripts/check_catalog_freshness.py:10`
+- `S-564A5BDA96` `main` — `engineering/scripts/check_catalog_freshness.py:13`
 
 ## AU-010 — Create package/domain manifest schema
 
@@ -637,7 +643,9 @@ File markers:
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
 - `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
+- `F-53A65427A1` `engineering/scripts/check_catalog_freshness.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
+- `F-22FC22B151` `engineering/scripts/validate_manifests.py` — engineering-index — general
 - `F-1D9A0CBBDF` `cli/package.json` — configuration/data — general
 - `F-7030D0B2F7` `package.json` — configuration/data — general
 - `F-945FC0DD95` `packages/adapter-utils/package.json` — configuration/data — adapter
@@ -659,9 +667,7 @@ File markers:
 - `F-C40BA5C301` `packages/mcp-server/package.json` — configuration/data — mcp
 - `F-37CB981377` `packages/paperclip-eval-kernel/package.json` — configuration/data — general
 - `F-9B5D178AC2` `packages/paperclip-runner/package.json` — configuration/data — runner
-- `F-83FBD2BA06` `packages/paperclip-runner/scripts/pi-distribution/package.json` — configuration/data — runner
-- `F-971D6AAD1C` `packages/plugins/create-paperclip-plugin/package.json` — configuration/data — plugin
-- … 24 additional file markers in JSON
+- … 26 additional file markers in JSON
 
 Priority symbol markers:
 - `S-BAE5780C5A` `tracked_files` — `engineering/scripts/build_code_catalog.py:15`
@@ -676,6 +682,8 @@ Priority symbol markers:
 - `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
 - `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
 - `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
+- `S-4A6C5954BE` `git` — `engineering/scripts/check_catalog_freshness.py:10`
+- `S-564A5BDA96` `main` — `engineering/scripts/check_catalog_freshness.py:13`
 
 ## AU-020 — Define stable contract IDs
 
@@ -1590,7 +1598,7 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
-- `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1644,18 +1652,18 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
-- `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1773,19 +1781,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
 - `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1827,7 +1835,9 @@ File markers:
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
 - `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
 - `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
+- `F-53A65427A1` `engineering/scripts/check_catalog_freshness.py` — engineering-index — general
 - `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
+- `F-22FC22B151` `engineering/scripts/validate_manifests.py` — engineering-index — general
 - `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
 - `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
 
@@ -1844,6 +1854,8 @@ Priority symbol markers:
 - `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
 - `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
 - `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
+- `S-4A6C5954BE` `git` — `engineering/scripts/check_catalog_freshness.py:10`
+- `S-564A5BDA96` `main` — `engineering/scripts/check_catalog_freshness.py:13`
 
 ## AU-051 — Change-to-knowledge update helper
 
@@ -1867,19 +1879,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
 - `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1932,19 +1944,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
 - `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
@@ -1960,6 +1972,8 @@ Priority symbol markers:
 - `S-46A75EDCC7` `marker_file` — `engineering/scripts/build_marker_index.py:20`
 - `S-FF8FD0E702` `marker_symbol` — `engineering/scripts/build_marker_index.py:23`
 - `S-BA08E38E59` `matches` — `engineering/scripts/build_marker_index.py:74`
+- `S-4A6C5954BE` `git` — `engineering/scripts/check_catalog_freshness.py:10`
+- `S-564A5BDA96` `main` — `engineering/scripts/check_catalog_freshness.py:13`
 
 ## AU-053 — Agentic maintenance loop
 
@@ -1983,19 +1997,19 @@ File markers:
 - `F-7F82E4964A` `engineering/catalog/FILE_METADATA_SCHEMA.md` — documentation — general
 - `F-E8B9DA538F` `engineering/catalog/FUNCTION_INDEX.md` — documentation — general
 - `F-B1CD3539AF` `engineering/catalog/README.md` — documentation — general
+- `F-B7A083A192` `engineering/manifests/CONFIGURATION_INDEX.md` — documentation — general
+- `F-4D104436D3` `engineering/manifests/CONTRACT_ID_RULES.md` — documentation — general
+- `F-E9B118516D` `engineering/manifests/MANIFEST_SCHEMA.md` — documentation — general
+- `F-3A74A9BE4D` `engineering/manifests/SECURITY_SIDE_EFFECT_MATRIX.md` — documentation — general
+- `F-F5B84900D6` `engineering/manifests/adapters-hermes-plugins.md` — documentation — adapter, plugin, hermes-integration
+- `F-4AE2A71BB3` `engineering/manifests/database.md` — documentation — database
+- `F-849A813D1F` `engineering/manifests/execution-recovery.md` — documentation — recovery
+- `F-19C5DDDD41` `engineering/manifests/server-api-auth.md` — documentation — authentication
+- `F-4DB5D57524` `engineering/manifests/ui-cli-deployment.md` — documentation — general
 - `F-CB5DA695EB` `engineering/markers/MARKER_INDEX.json` — engineering-index — general
 - `F-38A991565E` `engineering/markers/README.md` — documentation — general
 - `F-9425BDBB38` `engineering/markers/TASK_MARKERS.md` — documentation — general
 - `F-719549742A` `engineering/markers/TASK_MARKER_MAP.md` — documentation — general
-- `F-F7EA15BDFD` `engineering/plan/AGENTIC-UNDERSTANDING-DEVELOPMENT-PLAN.md` — documentation — general
-- `F-37FB8B73BA` `engineering/plan/TASKS.md` — documentation — general
-- `F-BE43427355` `engineering/scripts/build_code_catalog.py` — engineering-index — general
-- `F-1E427686E5` `engineering/scripts/build_marker_index.py` — engineering-index — general
-- `F-43D68FE634` `engineering/scripts/refresh_md_registry.py` — engineering-index — general
-- `F-515A6B8165` `engineering/templates/BUG.md` — documentation — general
-- `F-19DB8B49E8` `engineering/templates/DECISION.md` — documentation — general
-- `F-03DB69052F` `engineering/templates/JOURNAL_ENTRY.md` — documentation — general
-- `F-2FA31B964C` `packages/teams-catalog/catalog/bundled/software-development/product-engineering/.paperclip.yaml` — configuration/data — general
 - … 50 additional file markers in JSON
 
 Priority symbol markers:
