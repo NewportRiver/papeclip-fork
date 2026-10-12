@@ -5,12 +5,13 @@ This directory is the durable engineering memory and development log for the `Ne
 ## Start here
 
 1. `ENGINEERING_FUNDAMENTALS.md` — working principles and invariants.
-2. `PROJECT_MEMORY.md` — stable architecture and project facts.
-3. `CURRENT_WORK.md` — restartable current state and next actions.
-4. `SYSTEM_STATE.md` — source, runtime, persistence, recovery, and verification boundaries.
-5. `ARCHITECTURE.md` — engineering map and data/control flow.
-6. `TEST_STATUS.md` — verified and unverified checks.
-7. `MASTER_MD_REGISTRY.md` — generated Markdown inventory.
+2. `AGENTIC-UNDERSTANDING-ROADMAP.md` — layered knowledge, verification, and automation plan.
+3. `PROJECT_MEMORY.md` — stable architecture and project facts.
+4. `CURRENT_WORK.md` — restartable current state and next actions.
+5. `SYSTEM_STATE.md` — source, runtime, persistence, recovery, and verification boundaries.
+6. `ARCHITECTURE.md` — engineering map and data/control flow.
+7. `TEST_STATUS.md` — verified and unverified checks.
+8. `MASTER_MD_REGISTRY.md` — generated Markdown inventory.
 
 ## Development record
 

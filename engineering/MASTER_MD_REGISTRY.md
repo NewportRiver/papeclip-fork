@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T01:51:48.530283+00:00
+Generated: 2026-10-12T02:00:17.017543+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -427,6 +427,7 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `docs/start/core-concepts.md` | Organization | 86 |
 | `docs/start/quickstart.md` | Quick Start (Recommended) | 62 |
 | `docs/start/what-is-paperclip.md` | The Problem | 39 |
+| `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` | Agentic Paperclip Understanding and Automation Roadmap | 253 |
 | `engineering/ARCHITECTURE.md` | Architecture Record | 44 |
 | `engineering/BUGLOG.md` | Buglog and Engineering Lessons | 33 |
 | `engineering/CURRENT_WORK.md` | Current Work | 30 |
@@ -436,7 +437,7 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
 | `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 814 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
-| `engineering/README.md` | Paperclip Engineering Framework | 43 |
+| `engineering/README.md` | Paperclip Engineering Framework | 44 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
 | `engineering/TEST_STATUS.md` | Test Status | 34 |
 | `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
