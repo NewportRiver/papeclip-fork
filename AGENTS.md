@@ -17,6 +17,11 @@ Before making changes, read in this order:
 4. `doc/DEVELOPING.md`
 5. `doc/DATABASE.md`
 
+For fork-local engineering continuity, also read
+`engineering/README.md`, `engineering/ENGINEERING_FUNDAMENTALS.md`, and
+`engineering/CURRENT_WORK.md`. Keep those records evidence-based and update
+the smallest relevant engineering record when a material change is made.
+
 `doc/SPEC.md` is long-horizon product context.
 `doc/SPEC-implementation.md` is the concrete V1 build contract.
 
