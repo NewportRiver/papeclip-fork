@@ -1,6 +1,6 @@
 # Function and Symbol Index
 
-Generated from commit `354b3ca0577afb96b180b8e677be90bd75c20479`.
+Generated from commit `2a000e215a802e8f6738d43d67d16df9ef99d07e`.
 
 | Kind | Symbol | File | Line | Domain |
 |---|---|---|---:|---|
@@ -5383,6 +5383,14 @@ Generated from commit `354b3ca0577afb96b180b8e677be90bd75c20479`.
 | `const` | `raw` | `docker/openclaw-smoke/server.mjs` | 71 | general |
 | `const` | `event` | `docker/openclaw-smoke/server.mjs` | 79 | general |
 | `const` | `code` | `docker/openclaw-smoke/server.mjs` | 91 | general |
+| `python-def` | `tracked_files` | `engineering/scripts/build_code_catalog.py` | 15 | general |
+| `python-def` | `layer` | `engineering/scripts/build_code_catalog.py` | 19 | general |
+| `python-def` | `role` | `engineering/scripts/build_code_catalog.py` | 40 | general |
+| `python-def` | `classify_domain` | `engineering/scripts/build_code_catalog.py` | 51 | general |
+| `python-def` | `symbols` | `engineering/scripts/build_code_catalog.py` | 58 | general |
+| `python-def` | `imports` | `engineering/scripts/build_code_catalog.py` | 81 | general |
+| `python-def` | `headings` | `engineering/scripts/build_code_catalog.py` | 88 | general |
+| `python-def` | `env_vars` | `engineering/scripts/build_code_catalog.py` | 91 | general |
 | `const` | `endpoint` | `integrations/assistant-plugins/build.mjs` | 6 | plugin |
 | `const` | `local` | `integrations/assistant-plugins/build.mjs` | 7 | plugin |
 | `const` | `root` | `integrations/assistant-plugins/build.mjs` | 12 | plugin |
