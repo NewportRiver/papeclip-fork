@@ -25,6 +25,11 @@ the smallest relevant engineering record when a material change is made.
 `doc/SPEC.md` is long-horizon product context.
 `doc/SPEC-implementation.md` is the concrete V1 build contract.
 
+When setting up or migrating Paperclip to the Newport River server, read
+`engineering/NEWPORT-RIVER-MIGRATION-RUNBOOK.md` before making runtime,
+database, service, network, or Hermes-adapter changes. Treat it as a
+checklist and evidence boundary, not as proof that the server is configured.
+
 When adding or changing an Apps catalog connection, also follow
 `doc/connections/CONNECTOR-PLAYBOOK.md`. It is the canonical connection
 authoring runbook for provider research, supported transport/auth patterns,

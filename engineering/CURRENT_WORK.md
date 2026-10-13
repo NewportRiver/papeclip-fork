@@ -16,14 +16,16 @@
 - Added the agentic-understanding development branch plan and task backlog.
 - Completed the Android-safe static foundation: domain manifests, contract-ID rules, configuration index, security/side-effect matrix, manifest validation, catalog freshness checking, and regenerated file/symbol/marker indexes.
 - Added a reproducible catalog for all tracked files and extracted source symbols.
+- Added `engineering/NEWPORT-RIVER-MIGRATION-RUNBOOK.md` with fresh-agent startup instructions, server prerequisite checks, Paperclip/PostgreSQL setup, Hermes integration sequencing, recovery requirements, and evidence-based completion gates.
 
 ## Next actions
 
 1. Keep the framework current with material changes.
-2. Install pnpm in a controlled environment before claiming build/runtime verification.
-3. Run targeted typecheck/test/build checks after dependency setup.
-4. Add decision or bug records when future changes introduce durable lessons.
-5. Refresh the Markdown registry after documentation changes.
+2. Execute the Newport River migration runbook on the target server, beginning with read-only host and repository checks.
+3. Install pnpm in a controlled environment before claiming build/runtime verification.
+4. Run targeted typecheck/test/build checks after dependency setup.
+5. Add decision or bug records when future changes introduce durable lessons.
+6. Refresh the Markdown registry after documentation changes.
 
 ## Blockers and limits
 

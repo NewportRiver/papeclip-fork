@@ -9,9 +9,10 @@ This directory is the durable engineering memory and development log for the `Ne
 3. `PROJECT_MEMORY.md` — stable architecture and project facts.
 4. `CURRENT_WORK.md` — restartable current state and next actions.
 5. `SYSTEM_STATE.md` — source, runtime, persistence, recovery, and verification boundaries.
-6. `ARCHITECTURE.md` — engineering map and data/control flow.
-7. `TEST_STATUS.md` — verified and unverified checks.
-8. `MASTER_MD_REGISTRY.md` — generated Markdown inventory.
+6. `NEWPORT-RIVER-MIGRATION-RUNBOOK.md` — fresh-agent server migration, setup, Hermes integration, recovery, and completion gates.
+7. `ARCHITECTURE.md` — engineering map and data/control flow.
+8. `TEST_STATUS.md` — verified and unverified checks.
+9. `MASTER_MD_REGISTRY.md` — generated Markdown inventory.
 
 ## Development record
 

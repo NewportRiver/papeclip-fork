@@ -1,6 +1,6 @@
 # Markdown Registry
 
-Generated: 2026-10-12T02:42:04.185822+00:00
+Generated: 2026-10-13T19:32:53.506573+00:00
 
 This index is generated; edit source Markdown files, then rerun the script.
 
@@ -45,7 +45,7 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `.claude/skills/design-guide/SKILL.md` | Paperclip Design Guide | 351 |
 | `.claude/skills/design-guide/references/component-index.md` | Paperclip Component Index | 323 |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Thinking Path | 108 |
-| `AGENTS.md` | AGENTS.md | 235 |
+| `AGENTS.md` | AGENTS.md | 240 |
 | `CONTRIBUTING.md` | Contributing Guide | 200 |
 | `DESIGN.md` | Paperclip Design Principles | 170 |
 | `README.md` | Paperclip is the app people use to manage AI agents for work. | 604 |
@@ -430,14 +430,15 @@ This index is generated; edit source Markdown files, then rerun the script.
 | `engineering/AGENTIC-UNDERSTANDING-ROADMAP.md` | Agentic Paperclip Understanding and Automation Roadmap | 253 |
 | `engineering/ARCHITECTURE.md` | Architecture Record | 44 |
 | `engineering/BUGLOG.md` | Buglog and Engineering Lessons | 33 |
-| `engineering/CURRENT_WORK.md` | Current Work | 32 |
+| `engineering/CURRENT_WORK.md` | Current Work | 34 |
 | `engineering/DECISIONS.md` | Engineering Decisions | 25 |
 | `engineering/ENGINEERING_FUNDAMENTALS.md` | Engineering Fundamentals | 55 |
 | `engineering/FEATURES.md` | Feature Inventory | 23 |
 | `engineering/JOURNAL.md` | Engineering Journal | 11 |
 | `engineering/MASTER_MD_REGISTRY.md` | Markdown Registry | 829 |
+| `engineering/NEWPORT-RIVER-MIGRATION-RUNBOOK.md` | Newport River Server Migration and Fresh-Agent Runbook | 172 |
 | `engineering/PROJECT_MEMORY.md` | Project Memory | 29 |
-| `engineering/README.md` | Paperclip Engineering Framework | 55 |
+| `engineering/README.md` | Paperclip Engineering Framework | 56 |
 | `engineering/SYSTEM_STATE.md` | System State | 33 |
 | `engineering/TEST_STATUS.md` | Test Status | 34 |
 | `engineering/catalog/FILE_METADATA_SCHEMA.md` | File Metadata Schema and Reverse-Engineering Method | 48 |
