@@ -54,6 +54,19 @@ class CorporateMemoryTests(unittest.TestCase):
         self.assertEqual(service.publish(proposal)["status"], "Published")
         service.close()
 
+    def test_policy_text_can_describe_secret_boundaries(self):
+        service = self.make_service()
+        record = service.write_ordinary(
+            title="Secret handling policy",
+            body="Never commit credentials, passwords, OAuth state, or private keys; use [REDACTED] placeholders.",
+            domain="Engineering Governance",
+            owner="Technology Department",
+            source="policy-test",
+        )
+        self.assertEqual(record["status"], "Approved")
+        self.assertEqual(service.search("secret handling")[0]["id"], record["record_id"])
+        service.close()
+
     def test_cross_agent_exchange_and_revision_history(self):
         hermes = self.make_service("employee", "hermes-01")
         gemini = self.make_service("employee", "gemini-02")
