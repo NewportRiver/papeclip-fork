@@ -20,10 +20,10 @@ class ValidationError(ValueError):
 
 
 ROLE_PERMISSIONS = {
-    "employee": {"search", "read", "propose"},
-    "reviewer": {"search", "read", "propose", "review"},
-    "publisher": {"search", "read", "propose", "review", "publish"},
-    "admin": {"search", "read", "propose", "review", "publish", "backup"},
+    "employee": {"search", "read", "propose", "write_ordinary"},
+    "reviewer": {"search", "read", "propose", "write_ordinary", "review"},
+    "publisher": {"search", "read", "propose", "write_ordinary", "review", "publish"},
+    "admin": {"search", "read", "propose", "write_ordinary", "review", "publish", "backup"},
 }
 
 SENSITIVE_MARKERS = re.compile(
@@ -129,6 +129,42 @@ class CorporateMemoryService:
         ).fetchall()
         self._audit("search", None, "allowed", f"query={query[:80]}")
         return [dict(row) for row in rows]
+
+    def write_ordinary(
+        self,
+        *,
+        title: str,
+        body: str,
+        domain: str,
+        owner: str,
+        source: str,
+        record_id: str | None = None,
+    ) -> dict[str, Any]:
+        """Create or revise ordinary internal knowledge without a review gate."""
+        self._require("write_ordinary")
+        for value, field in ((title, "title"), (body, "body"), (domain, "domain"), (owner, "owner"), (source, "source")):
+            self._validate_text(value, field)
+        if record_id is None:
+            record_id = f"NR-MEM-{uuid.uuid4().hex[:12].upper()}"
+            with self.db:
+                self.db.execute(
+                    "INSERT INTO knowledge_records(id, domain, scope, classification, owner, source, status, title, body, version, created_by, approved_by, approved_at) VALUES (?, ?, 'Corporate', 'Internal', ?, ?, 'Approved', ?, ?, 1, ?, ?, CURRENT_TIMESTAMP)",
+                    (record_id, domain, owner, source, title, body, self.actor, self.actor),
+                )
+                self.db.execute("INSERT INTO revisions(record_id, version, title, body, changed_by) VALUES (?, 1, ?, ?, ?)", (record_id, title, body, self.actor))
+                self._audit("write_ordinary", record_id, "allowed", "created")
+            return {"record_id": record_id, "version": 1, "status": "Approved"}
+        current = self.db.execute("SELECT version, status FROM knowledge_records WHERE id=?", (record_id,)).fetchone()
+        if current is None:
+            raise KeyError(record_id)
+        if current["status"] != "Approved":
+            raise AuthorizationError("ordinary writes cannot modify a pending or rejected record")
+        version = current["version"] + 1
+        with self.db:
+            self.db.execute("UPDATE knowledge_records SET title=?, body=?, version=?, updated_at=CURRENT_TIMESTAMP WHERE id=?", (title, body, version, record_id))
+            self.db.execute("INSERT INTO revisions(record_id, version, title, body, changed_by) VALUES (?, ?, ?, ?, ?)", (record_id, version, title, body, self.actor))
+            self._audit("write_ordinary", record_id, "allowed", f"revised version={version}")
+        return {"record_id": record_id, "version": version, "status": "Approved"}
 
     def read(self, record_id: str) -> dict[str, Any]:
         self._require("read")

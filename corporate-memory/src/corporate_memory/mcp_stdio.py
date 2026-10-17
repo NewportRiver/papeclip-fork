@@ -13,6 +13,7 @@ def tool_definitions() -> list[dict[str, Any]]:
     return [
         {"name": "search_knowledge", "description": "Search approved corporate knowledge.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string"}, "limit": {"type": "integer"}}, "required": ["query"]}},
         {"name": "read_knowledge", "description": "Read one approved corporate record.", "inputSchema": {"type": "object", "properties": {"record_id": {"type": "string"}}, "required": ["record_id"]}},
+        {"name": "write_ordinary_knowledge", "description": "Create or revise ordinary Internal corporate knowledge with attribution and revision history.", "inputSchema": {"type": "object", "properties": {"record_id": {"type": ["string", "null"]}, "title": {"type": "string"}, "body": {"type": "string"}, "domain": {"type": "string"}, "owner": {"type": "string"}, "source": {"type": "string"}}, "required": ["title", "body", "domain", "owner", "source"]}},
         {"name": "propose_knowledge", "description": "Propose knowledge for review; never publishes directly.", "inputSchema": {"type": "object", "properties": {"title": {"type": "string"}, "body": {"type": "string"}, "domain": {"type": "string"}, "scope": {"type": "string"}, "classification": {"type": "string"}, "owner": {"type": "string"}, "source": {"type": "string"}, "rationale": {"type": "string"}, "evidence_class": {"type": "string"}}, "required": ["title", "body", "domain", "scope", "classification", "owner", "source", "rationale"]}},
         {"name": "review_knowledge", "description": "Approve or reject a pending proposal.", "inputSchema": {"type": "object", "properties": {"proposal_id": {"type": "string"}, "decision": {"type": "string", "enum": ["approve", "reject"]}, "notes": {"type": "string"}}, "required": ["proposal_id", "decision"]}},
         {"name": "publish_knowledge", "description": "Publish a reviewed and approved proposal.", "inputSchema": {"type": "object", "properties": {"proposal_id": {"type": "string"}}, "required": ["proposal_id"]}},
@@ -52,6 +53,7 @@ def main() -> None:
                     args = params.get("arguments") or {}
                     if name == "search_knowledge": value = result(service.search(args["query"], args.get("limit", 20)))
                     elif name == "read_knowledge": value = result(service.read(args["record_id"]))
+                    elif name == "write_ordinary_knowledge": value = result(service.write_ordinary(**args))
                     elif name == "propose_knowledge": value = result({"proposal_id": service.propose(**args)})
                     elif name == "review_knowledge": value = result(service.review(**args))
                     elif name == "publish_knowledge": value = result(service.publish(args["proposal_id"]))

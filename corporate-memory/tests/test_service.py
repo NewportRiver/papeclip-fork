@@ -54,6 +54,19 @@ class CorporateMemoryTests(unittest.TestCase):
         self.assertEqual(service.publish(proposal)["status"], "Published")
         service.close()
 
+    def test_cross_agent_exchange_and_revision_history(self):
+        hermes = self.make_service("employee", "hermes-01")
+        gemini = self.make_service("employee", "gemini-02")
+        created = hermes.write_ordinary(title="Shared memory handshake", body="Hermes recorded the baseline exchange.", domain="Engineering", owner="Technology Department", source="activation-test")
+        found = gemini.search("handshake")
+        self.assertEqual(found[0]["id"], created["record_id"])
+        revised = gemini.write_ordinary(record_id=created["record_id"], title="Shared memory handshake", body="Gemini added a related finding and preserved the baseline.", domain="Engineering", owner="Technology Department", source="activation-test")
+        self.assertEqual(revised["version"], 2)
+        self.assertIn("Gemini added", hermes.read(created["record_id"])["body"])
+        revisions = hermes.db.execute("SELECT changed_by, version FROM revisions WHERE record_id=? ORDER BY version", (created["record_id"],)).fetchall()
+        self.assertEqual([(row["changed_by"], row["version"]) for row in revisions], [("hermes-01", 1), ("gemini-02", 2)])
+        hermes.close(); gemini.close()
+
     def test_backup_and_clean_restore(self):
         service = self.make_service("admin", "memory-admin")
         proposal = self.propose(service)
