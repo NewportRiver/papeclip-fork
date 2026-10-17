@@ -1,0 +1,12 @@
+[project]
+name = "newport-river-corporate-memory"
+version = "0.1.0"
+description = "Standalone governed SQLite institutional memory with MCP stdio integration"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+newport-corporate-memory-mcp = "corporate_memory.mcp_stdio:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
