@@ -4,9 +4,9 @@ import hashlib
 import json
 import os
 import re
-import shutil
 import sqlite3
 import uuid
+import fcntl
 from pathlib import Path
 from typing import Any
 
@@ -51,11 +51,27 @@ class CorporateMemoryService:
         self.db.close()
 
     def _migrate(self) -> None:
-        schema = Path(__file__).resolve().parents[2] / "migrations" / "001_initial.sql"
-        self.db.executescript(schema.read_text())
-        self.db.execute(
-            "INSERT OR IGNORE INTO schema_migrations(version) VALUES (1)"
-        )
+        migrations_dir = Path(__file__).resolve().parents[2] / "migrations"
+        migrations = sorted(migrations_dir.glob("*.sql"))
+        lock_path = self.db_path.with_suffix(self.db_path.suffix + ".migration.lock")
+        with lock_path.open("a+") as lock:
+            fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+            try:
+                for migration in migrations:
+                    version = int(migration.name.split("_", 1)[0])
+                    migration_table_exists = self.db.execute(
+                        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='schema_migrations'"
+                    ).fetchone()
+                    already_applied = migration_table_exists and self.db.execute(
+                        "SELECT 1 FROM schema_migrations WHERE version=?", (version,)
+                    ).fetchone()
+                    if already_applied:
+                        continue
+                    with self.db:
+                        self.db.executescript(migration.read_text())
+                        self.db.execute("INSERT OR IGNORE INTO schema_migrations(version) VALUES (?)", (version,))
+            finally:
+                fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
 
     def _require(self, operation: str) -> None:
         if operation not in ROLE_PERMISSIONS[self.role]:
@@ -123,9 +139,13 @@ class CorporateMemoryService:
     def search(self, query: str, limit: int = 20) -> list[dict[str, Any]]:
         self._require("search")
         self._validate_text(query, "query")
+        terms = [term for term in re.findall(r"[\w-]+", query) if term]
+        if not terms:
+            raise ValidationError("query must contain searchable text")
+        match_query = " AND ".join(f'"{term.replace(chr(34), chr(34) * 2)}"*' for term in terms)
         rows = self.db.execute(
-            "SELECT id, domain, scope, classification, owner, source, status, title, body, version FROM knowledge_records WHERE status='Approved' AND (title LIKE ? OR body LIKE ? OR domain LIKE ?) ORDER BY updated_at DESC LIMIT ?",
-            (f"%{query}%", f"%{query}%", f"%{query}%", max(1, min(limit, 100))),
+            "SELECT k.id, k.domain, k.scope, k.classification, k.owner, k.source, k.status, k.title, k.body, k.version FROM knowledge_search s JOIN knowledge_records k ON k.id=s.record_id WHERE k.status='Approved' AND knowledge_search MATCH ? ORDER BY k.updated_at DESC LIMIT ?",
+            (match_query, max(1, min(limit, 100))),
         ).fetchall()
         self._audit("search", None, "allowed", f"query={query[:80]}")
         return [dict(row) for row in rows]
