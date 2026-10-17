@@ -1,0 +1,13 @@
+{
+  "name": "newport-river-corporate-memory",
+  "transport": "stdio",
+  "command": "python",
+  "args": ["-m", "corporate_memory.mcp_stdio"],
+  "cwd": "/opt/newport-river/corporate-memory",
+  "env": {
+    "PYTHONPATH": "/opt/newport-river/corporate-memory/src",
+    "CORPORATE_MEMORY_DB": "/var/lib/newport-river/corporate-memory.sqlite3",
+    "CORPORATE_MEMORY_ACCESS_TOKEN": "${CORPORATE_MEMORY_ACCESS_TOKEN}",
+    "CORPORATE_MEMORY_TOKENS_JSON": "${CORPORATE_MEMORY_TOKENS_JSON}"
+  }
+}
