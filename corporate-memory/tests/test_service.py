@@ -42,7 +42,7 @@ class CorporateMemoryTests(unittest.TestCase):
         with self.assertRaises(AuthorizationError):
             service.review(proposal, "approve")
         with self.assertRaises(ValidationError):
-            self.propose(service, body="Store the API key in shared memory.")
+            self.propose(service, body="api_key=sk-1234567890abcdef")
         service.close()
 
     def test_only_approved_proposals_can_publish(self):

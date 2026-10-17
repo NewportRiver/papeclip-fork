@@ -27,7 +27,7 @@ ROLE_PERMISSIONS = {
 }
 
 SENSITIVE_MARKERS = re.compile(
-    r"(api[_ -]?key|password|secret|private[_ -]?key|oauth|access[_ -]?token|refresh[_ -]?token|cvc|credential)",
+    r"(?:api[_ -]?key|password|private[_ -]?key|access[_ -]?token|refresh[_ -]?token|cvc|credential)\s*[:=]\s*(?!\[REDACTED\])[A-Za-z0-9_./+=-]{8,}|(?<![A-Za-z0-9])(?:sk|ghp|xoxb|ya29)-[A-Za-z0-9_-]{10,}",
     re.IGNORECASE,
 )
 
