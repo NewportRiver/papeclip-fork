@@ -636,7 +636,8 @@ export function decisionService(db: Db, options: DecisionServiceOptions) {
   }
 
   async function decide(input: { id: string; optionId: string; inputValues?: Record<string, string>; idempotencyKey?: string | null; decidedByUserId: string;
-    userActor: AuthorizationActor; dismissed?: boolean; dismissReason?: string | null }) {
+    userActor: AuthorizationActor; dismissed?: boolean; dismissReason?: string | null;
+    delegatedAgent?: { agentId: string; runId: string; rationale: string } }) {
     const current = await get(input.id); if (!current) throw notFound("Decision not found");
     const metadata = current.metadata as Record<string, unknown>;
     if (!verifyDecisionSpec(spec({ id: current.id, options: current.options, targetSnapshots: current.targetSnapshots as Record<string, Snapshot> }), current.signedSpec)) throw forbidden("Decision signature verification failed");
@@ -667,15 +668,32 @@ export function decisionService(db: Db, options: DecisionServiceOptions) {
     const [claimed] = await db.update(decisions).set({ status: "decided", executionStatus: "running", chosenOptionId: input.optionId, inputValues: values,
       decidedByUserId: input.decidedByUserId, decidedAt: new Date(), updatedAt: new Date(), metadata: { ...metadata,
         decideIdempotencyKey: input.idempotencyKey ?? null,
+        ...(input.delegatedAgent ? { delegatedCeoDecision: {
+          agentId: input.delegatedAgent.agentId, runId: input.delegatedAgent.runId,
+          rationale: input.delegatedAgent.rationale, authority: "routine_coordination_v1",
+        } } : {}),
         ...(current.continuationPolicy === "wake_origin_agent" ? { continuationPending: true } : {}),
         ...(input.dismissed ? { dismissed: true, dismissReason: input.dismissReason ?? null } : {}) } })
       .where(and(eq(decisions.id, current.id), eq(decisions.status, "open"))).returning();
     if (!claimed) throw conflict("decision_already_resolved", { code: "decision_already_resolved" });
     const run = await db.select({ responsibleUserId: heartbeatRuns.responsibleUserId }).from(heartbeatRuns).where(eq(heartbeatRuns.id, claimed.originRunId)).then((rows) => rows[0] ?? null);
-    await logActivity(db, { companyId: claimed.companyId, actorType: "system", actorId: "decision-executor", agentId: claimed.originAgentId, runId: claimed.originRunId,
-      responsibleUserIdOverride: input.decidedByUserId, action: input.dismissed ? "decision.dismissed" : "decision.decided", entityType: "decision", entityId: claimed.id,
-      details: { chosenOptionId: input.optionId, decidedByUserId: input.decidedByUserId, originResponsibleUserId: run?.responsibleUserId ?? null,
-        ...(input.dismissed ? { dismissed: true, dismissReason: input.dismissReason ?? null } : {}) } });
+    if (input.delegatedAgent) {
+      // Keep agent provenance distinct from board/user approval in the audit.
+      // decidedByUserId uses a namespaced sentinel for legacy schema compatibility;
+      // no user authority or board role is granted to this actor.
+      await logActivity(db, { companyId: claimed.companyId, actorType: "agent",
+        actorId: input.delegatedAgent.agentId, agentId: input.delegatedAgent.agentId,
+        runId: input.delegatedAgent.runId, action: "decision.agent_routine_decided",
+        entityType: "decision", entityId: claimed.id,
+        details: { chosenOptionId: input.optionId, delegatedCeoDecision: true,
+          rationale: input.delegatedAgent.rationale, decidedByAgentId: input.delegatedAgent.agentId,
+          originAgentId: claimed.originAgentId } });
+    } else {
+      await logActivity(db, { companyId: claimed.companyId, actorType: "system", actorId: "decision-executor", agentId: claimed.originAgentId, runId: claimed.originRunId,
+        responsibleUserIdOverride: input.decidedByUserId, action: input.dismissed ? "decision.dismissed" : "decision.decided", entityType: "decision", entityId: claimed.id,
+        details: { chosenOptionId: input.optionId, decidedByUserId: input.decidedByUserId, originResponsibleUserId: run?.responsibleUserId ?? null,
+          ...(input.dismissed ? { dismissed: true, dismissReason: input.dismissReason ?? null } : {}) } });
+    }
     return resumeDecision(claimed, input.userActor);
   }
 
