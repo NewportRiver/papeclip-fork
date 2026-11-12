@@ -18,6 +18,11 @@ import { authorizationDeniedDetails, authorizationService } from "../services/au
 import { canReadDecisionSource } from "../services/decision-queues.js";
 import { hashAttentionArchiveManifest } from "../services/decision-retention.js";
 import { forbidden, unprocessable } from "../errors.js";
+import {
+  ceoDecisionMode,
+  isCeoDelegableRoutineDecision,
+  isConfiguredCeoRun,
+} from "../services/ceo-decision-delegation.js";
 
 const createSchema = z.object({
   title: z.string().trim().min(1).max(500),
@@ -33,6 +38,11 @@ const createSchema = z.object({
 const bundleSchema = z.object({ title: z.string().trim().min(1).max(500), summary: z.string().max(100_000), decisions: z.array(createSchema).min(1).max(50) }).strict();
 const decideSchema = z.object({ optionId: z.string().trim().min(1).max(120), inputValues: z.record(z.string(), z.string().max(20_000)).optional(), idempotencyKey: z.string().trim().min(1).max(500).nullable().optional() }).strict();
 const dismissSchema = z.object({ reason: z.string().max(20_000).nullable().optional() }).strict();
+const ceoDecideSchema = z.object({
+  optionId: z.string().trim().min(1).max(120),
+  rationale: z.string().trim().min(10).max(2000),
+  idempotencyKey: z.string().trim().min(1).max(500),
+}).strict();
 const statsQuerySchema = z.object({
   groupBy: z.literal("ruleKey"),
   originAgentId: z.string().guid().optional(),
@@ -145,6 +155,61 @@ export function decisionRoutes(db: Db, options: DecisionServiceOptions) {
     const agent = agentContext(req); if (!agent) { res.status(403).json({ error: "Agent run context required" }); return; }
     res.status(201).json(await svc.createBundle({ companyId, actor: req.actor, ...agent, ...req.body }));
   });
+  // Project BILLION fork extension. Strictly opt-in and scoped to one genuine
+  // run-scoped CEO identity. This does NOT grant board impersonation.
+  router.get("/companies/:companyId/ceo-decision-queue", async (req, res) => {
+    const companyId = req.params.companyId as string;
+    assertCompanyAccess(req, companyId);
+    if (!isConfiguredCeoRun(req.actor, companyId, "read")) throw forbidden("CEO decision delegation not authorized");
+    const access = await authorizationService(db).decide({
+      actor: req.actor, action: "decision_queue:read", resource: { type: "company", companyId },
+    });
+    if (!access.allowed) throw forbidden(access.explanation, authorizationDeniedDetails(access));
+    const query = z.object({ limit: z.coerce.number().int().positive().max(100).optional() }).safeParse(req.query);
+    if (!query.success) { res.status(400).json({ error: "Invalid queue filter" }); return; }
+    const rows = await svc.list(companyId, { status: "open", limit: query.data.limit ?? 50 });
+    res.json({
+      mode: ceoDecisionMode(),
+      items: rows.map((row) => {
+        const agentDecidable = ceoDecisionMode() === "routine"
+          && isCeoDelegableRoutineDecision(row, req.actor.agentId!);
+        return {
+          id: row.id, title: row.title, ruleKey: row.ruleKey,
+          originAgentId: row.originAgentId, originIssueId: row.originIssueId,
+          createdAt: row.createdAt, expiresAt: row.expiresAt,
+          status: row.status,
+          authority: agentDecidable ? "ceo_routine" : "board_only",
+          // Board-only decisions remain metadata-only in an agent response.
+          ...(agentDecidable ? { body: row.body, options: row.options.map(({ id, label }) => ({ id, label })) } : {}),
+        };
+      }),
+    });
+  });
+
+  router.post("/companies/:companyId/ceo-decisions/:id/decide", validate(ceoDecideSchema), async (req, res) => {
+    const companyId = req.params.companyId as string;
+    assertCompanyAccess(req, companyId);
+    if (!isConfiguredCeoRun(req.actor, companyId, "routine")) throw forbidden("CEO routine-decision authority not configured");
+    const access = await authorizationService(db).decide({
+      actor: req.actor, action: "decision_queue:manage", resource: { type: "company", companyId },
+    });
+    if (!access.allowed) throw forbidden(access.explanation, authorizationDeniedDetails(access));
+    const row = await svc.get(req.params.id as string);
+    if (!row || row.companyId !== companyId) { res.status(404).json({ error: "Decision not found" }); return; }
+    if (!isCeoDelegableRoutineDecision(row, req.actor.agentId!)) {
+      throw forbidden("This decision requires board disposition");
+    }
+    const { optionId, rationale, idempotencyKey } = req.body as z.infer<typeof ceoDecideSchema>;
+    res.json(await svc.decide({
+      id: row.id,
+      optionId,
+      idempotencyKey,
+      decidedByUserId: `agent:${req.actor.agentId!}`,
+      userActor: req.actor,
+      delegatedAgent: { agentId: req.actor.agentId!, runId: req.actor.runId!, rationale },
+    }));
+  });
+
   router.get("/companies/:companyId/decisions", async (req, res) => {
     const companyId = req.params.companyId as string; assertBoard(req); assertCompanyAccess(req, companyId);
     const query = z.object({ status: z.enum(["open", "decided", "expired", "cancelled"]).optional(), bundleId: z.string().guid().optional(), targetIssueId: z.string().guid().optional(), originAgentId: z.string().guid().optional(), limit: z.coerce.number().int().positive().max(100).optional() }).safeParse(req.query);
