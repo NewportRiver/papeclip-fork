@@ -1232,8 +1232,13 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
       );
       const args = execArgs.args;
       const pricingContext = execArgs.fastModeApplied ? { serviceTier: "fast" } : undefined;
-      if (ctx.agentIdentity) {
-        const identityNames = ["PAPERCLIP_AGENT_KEY_ID", "PAPERCLIP_AGENT_PUBLIC_KEY", "PAPERCLIP_AGENT_PRIVATE_KEY"];
+      // A run-scoped Paperclip API JWT must reach Codex's tool shell even when
+      // optional agent identity material is absent. Codex normally excludes
+      // environment variables containing "KEY" from its shell tools.
+      if (ctx.agentIdentity || authToken) {
+        const identityNames = ctx.agentIdentity
+          ? ["PAPERCLIP_AGENT_KEY_ID", "PAPERCLIP_AGENT_PUBLIC_KEY", "PAPERCLIP_AGENT_PRIVATE_KEY"]
+          : [];
         const shellKeys = [...new Set([
           "PATH", "HOME", "LANG", "LANGUAGE", "LC_ALL", "LC_CTYPE", "TZ", "TMPDIR", "TEMP", "TMP", "CODEX_HOME",
           // Keep Codex's default secret-name exclusions except for the scoped
