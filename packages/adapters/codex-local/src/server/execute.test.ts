@@ -118,7 +118,7 @@ describe("codex execute — outbound auth copy-back restore contribution", () =>
     );
   }
 
-  async function runTeardown(input: { sandboxAuth: string; hostAuth: string; onProviderStopped?: () => Promise<void>; withIdentity?: boolean }) {
+  async function runTeardown(input: { sandboxAuth: string; hostAuth: string; onProviderStopped?: () => Promise<void>; withIdentity?: boolean; withRunToken?: boolean }) {
     const rootDir = await mkdtemp(
       path.join(os.tmpdir(), "paperclip-codex-copyback-e2e-"),
     );
@@ -140,8 +140,8 @@ describe("codex execute — outbound auth copy-back restore contribution", () =>
     const commandArgs: string[] = [];
     const executionResult = await execute({
       runId: "run-copyback-e2e",
+      ...(input.withRunToken || input.withIdentity ? { authToken: "assigned-run-token" } : {}),
       ...(input.withIdentity ? {
-        authToken: "assigned-run-token",
         agentIdentity: { keyId: "sha256:test", publicKeyPem: "public", privateKeyPem: "private" },
       } : {}),
       onMeta: async meta => { commandArgs.push(...(meta.commandArgs ?? [])); },
@@ -159,7 +159,7 @@ describe("codex execute — outbound auth copy-back restore contribution", () =>
         engine: "cli",
         // External CODEX_HOME (outside the managed company tree) so no managed
         // seeding rewrites auth.json before teardown; equals the shared host home.
-        env: { CODEX_HOME: sharedHostHome, ...(input.withIdentity ? { MY_SERVICE_TOKEN: "assigned-tool-token" } : {}) },
+        env: { CODEX_HOME: sharedHostHome, ...(input.withIdentity || input.withRunToken ? { MY_SERVICE_TOKEN: "assigned-tool-token" } : {}) },
       },
       context: {
         paperclipWorkspace: {
@@ -202,6 +202,22 @@ describe("codex execute — outbound auth copy-back restore contribution", () =>
     expect(keys).not.toContain("MY_SERVICE_TOKEN");
     expect(keys).not.toContain("DATABASE_URL");
     expect(keys).not.toContain("HOST_DATABASE_PASSWORD");
+    expect(commandArgs.join(" ")).not.toContain("assigned-run-token");
+    expect(commandArgs.join(" ")).not.toContain("assigned-tool-token");
+  });
+
+  it("passes only the scoped Paperclip JWT through the tool shell when no agent identity exists", async () => {
+    vi.stubEnv("DATABASE_URL", "postgres://operator:host-password@host/private");
+    const { commandArgs } = await runTeardown({
+      sandboxAuth: "{}", hostAuth: "{}", withRunToken: true, withIdentity: false,
+    });
+    const policy = commandArgs.find(arg => arg.startsWith("shell_environment_policy.include_only="));
+    expect(policy).toBeDefined();
+    const keys: string[] = JSON.parse(policy!.slice(policy!.indexOf("=") + 1));
+    expect(keys).toContain("PAPERCLIP_API_KEY");
+    expect(keys).not.toContain("PAPERCLIP_AGENT_PRIVATE_KEY");
+    expect(keys).not.toContain("MY_SERVICE_TOKEN");
+    expect(keys).not.toContain("DATABASE_URL");
     expect(commandArgs.join(" ")).not.toContain("assigned-run-token");
     expect(commandArgs.join(" ")).not.toContain("assigned-tool-token");
   });
